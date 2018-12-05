@@ -34,7 +34,7 @@ Source:
 - https://www.dataschool.io/
 
 
-### [Regression Analysis using Machine Learning] (coming soon)(#readme)
+### [Regression Analysis using Machine Learning] (coming soon)(https://github.com/rvalins/Data-Science-projects)
 
 
 ## Using Python to performance Data Manipulation or to automate tasks
