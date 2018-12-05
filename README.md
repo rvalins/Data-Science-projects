@@ -36,6 +36,7 @@ Source:
 
 ### [Regression Analysis using Machine Learning](https://github.com/rvalins/Data-Science-projects) (coming soon)
 Regression analysis consists of a set of machine learning methods that allow us to predict a continuous outcome variable (y) based on the value of one or multiple predictor variables (x).
+
 Source:
 - http://www.sthda.com/english/wiki/regression-analysis-essentials-for-machine-learning
 - https://www.dataschool.io/
