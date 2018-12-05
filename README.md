@@ -6,7 +6,7 @@ Welcome to my Data Science Projects repository at GitHub. Here you find some int
 
 ### Machine	Learning with Scikit-Learn and TensorFlow 
 
-#### [Emotion and identity detection from face images](https://github.com/rvalins/Data-Science-projects/tree/master/emotion-identity-detection)
+### [Emotion and identity detection from face images](https://github.com/rvalins/Data-Science-projects/tree/master/emotion-identity-detection)
 
 Convolutional neural network
 In deep learning, a convolutional neural network (CNN, or ConvNet) is a class of deep, feed-forward artificial neural networks, most commonly applied to analyzing visual imagery.
@@ -18,12 +18,12 @@ This project includes a code that allows users to create a dataset from a collec
 3. [Evaluation of the model](https://github.com/rvalins/Data-Science-projects/blob/master/emotion-identity-detection/validating_model.ipynb)
 
 Source: 
-https://en.wikipedia.org/wiki/Convolutional_neural_network
-https://www.kaggle.com/c/facial-keypoints-detector
-https://www.datascienceacademy.com.br/
+- https://en.wikipedia.org/wiki/Convolutional_neural_network
+- https://www.kaggle.com/c/facial-keypoints-detector
+- https://www.datascienceacademy.com.br/
 
 
-#### [Machine Learning on the Iris dataset (classification model)](https://github.com/rvalins/Data-Science-projects/blob/master/classification-models/classification_model.ipynb)
+### [Machine Learning on the Iris dataset (classification model)](https://github.com/rvalins/Data-Science-projects/blob/master/classification-models/classification_model.ipynb)
 Supervised learning is the machine learning task of learning a function that maps an input to an output based on example input-output pairs.
 
 Algorithms:
@@ -31,25 +31,25 @@ K-nearest Neighbors (KNN)
 Logistic regression
 
 Source:
-https://www.dataschool.io/
+- https://www.dataschool.io/
 
 
-#### Regression Analysis using Machine Learning (coming soon)
+### Regression Analysis using Machine Learning (coming soon)
 
 
 ### Using Python to performance Data Manipulation or to automate tasks
 
-#### [ElasticSearch](https://github.com/rvalins/Data-Science-projects/blob/master/elasticsearch/ElasticSearch_connection.ipynb)
+### [ElasticSearch](https://github.com/rvalins/Data-Science-projects/blob/master/elasticsearch/ElasticSearch_connection.ipynb)
 This project allows users to connect to a ElasticSearch server, to extract and to write this data in a JSON file.
 Elasticsearch is a full-text, distributed NoSQL database.
 This code also record the previous indexes that were scanned to only get new inputs.
 You can use the JSON to CSV file to convert to a structered table format.
 
-#### [Convert JSON to CSV file](https://github.com/rvalins/Data-Science-projects/blob/master/json_to_csv/json_to_csv-file.ipynb)
+### [Convert JSON to CSV file](https://github.com/rvalins/Data-Science-projects/blob/master/json_to_csv/json_to_csv-file.ipynb)
 This project reads a JSON file, parse it and convert it to a CSV file.
 
 
-#### [Using Python to send Emails from Gmail](https://github.com/rvalins/Data-Science-projects/blob/master/send_email/send_email.ipynb)
+### [Using Python to send Emails from Gmail](https://github.com/rvalins/Data-Science-projects/blob/master/send_email/send_email.ipynb)
 This project aggregate several features, such as:
 1. To custom email sender address
 As your email address is more likely to be to be recognized by your applicants and reviewers, your email is more likely to be received and not get caught in spam filters.
@@ -73,7 +73,7 @@ This project allows you to send more than one attachment, no matter the filetype
 This project create a log register for further reference
 
 
-#### [Data Analytics with Python by Web scraping](https://github.com/rvalins/Data-Science-projects/blob/master/webscraping/WebScraping.ipynb)
+### [Data Analytics with Python by Web scraping](https://github.com/rvalins/Data-Science-projects/blob/master/webscraping/WebScraping.ipynb)
 This project allows you to extract information from one website, using Python (BeautifulSoup).
 BeautifulSoup is a Python library which helps you to navigate, search and modify the parse tree.
 This information will be presented in a word cloud visualization.
