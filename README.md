@@ -4,7 +4,7 @@ Welcome to my Data Science Projects repository at GitHub. Here you find some int
 
 ## Table of Contents
 
-### Machine	Learning with Scikit-Learn and TensorFlow 
+## Machine	Learning with Scikit-Learn and TensorFlow 
 
 ### [Emotion and identity detection from face images](https://github.com/rvalins/Data-Science-projects/tree/master/emotion-identity-detection)
 
@@ -27,8 +27,8 @@ Source:
 Supervised learning is the machine learning task of learning a function that maps an input to an output based on example input-output pairs.
 
 Algorithms:
-K-nearest Neighbors (KNN)
-Logistic regression
+- K-nearest Neighbors (KNN)
+- Logistic regression
 
 Source:
 - https://www.dataschool.io/
@@ -37,7 +37,7 @@ Source:
 ### Regression Analysis using Machine Learning (coming soon)
 
 
-### Using Python to performance Data Manipulation or to automate tasks
+## Using Python to performance Data Manipulation or to automate tasks
 
 ### [ElasticSearch](https://github.com/rvalins/Data-Science-projects/blob/master/elasticsearch/ElasticSearch_connection.ipynb)
 This project allows users to connect to a ElasticSearch server, to extract and to write this data in a JSON file.
