@@ -35,12 +35,13 @@ Supervised learning is the machine learning task of learning a function that map
 - https://www.dataschool.io/
 
 
-### [Regression Analysis using Machine Learning](https://github.com/rvalins/Data-Science-projects) (coming soon)
+### [Regression Analysis using Machine Learning](https://github.com/rvalins/Data-Science-projects/blob/master/regression-model/linear_regression.ipynb)
 Regression analysis consists of a set of machine learning methods that allow us to predict a continuous outcome variable (y) based on the value of one or multiple predictor variables (x).
 
 **Source:**
 - http://www.sthda.com/english/wiki/regression-analysis-essentials-for-machine-learning
 - https://www.dataschool.io/
+- https://www.datascienceacademy.com.br/
 
 
 ## Using Python to performance Data Manipulation or to automate tasks
