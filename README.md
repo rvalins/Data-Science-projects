@@ -28,7 +28,7 @@ This project includes a code that allows users to create a dataset from a collec
 Supervised learning is the machine learning task of learning a function that maps an input to an output based on example input-output pairs.
 
 **Algorithms:**
-- K-nearest Neighbors (KNN)
+- K-nearest Neighbours (KNN)
 - Logistic regression
 
 **Source:**
