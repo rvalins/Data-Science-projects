@@ -44,6 +44,18 @@ Regression analysis consists of a set of machine learning methods that allow us 
 - https://www.datascienceacademy.com.br/
 
 
+### [Anomaly Detection (KDD CUP 99 network intrusion data)](https://github.com/rvalins/Data-Science-projects/blob/master/anomaly-detection/anomaly_detection_isolation_forest.ipynb)
+The detection of anomalies has signiﬁcant relevance and often provides critical actionable information in various application domains.
+Isolation Forest is an outlier detection technique that identifies anomalies instead of normal observations. Similarly to Random Forest it is built on an ensemble of binary (isolation) trees. 
+
+**Algorithms:**
+- Isolation Forest
+
+**Source:**
+- https://www.depends-on-the-definition.com
+- https://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/icdm08b.pdf
+
+
 ### [Time Series Analysis - ARIMA Forecasting](https://github.com/rvalins/Data-Science-projects/blob/master/time_series_analysis/ARIMA_forecasting.ipynb)
 Time Series is a collection of data points at constant time intervals. These are analyzed to determine the long term trend so as to forecast the future or perform some other form of analysis.
 ARIMA models are applied in some cases where data show evidence of non-stationarity, where an initial differencing step (corresponding to the "integrated" part of the model) can be applied one or more times to eliminate the non-stationarity.
