@@ -66,6 +66,15 @@ ARIMA models are applied in some cases where data show evidence of non-stationar
 - https://www.edureka.co/
 
 
+### [Multivariate Time Series Forecasting - Long Short-Term Memory (LSTM)](https://github.com/rvalins/Data-Science-projects/blob/master/multivariate_time_series_lstm/multivariate_time_series_lstm.ipynb)
+Multivariate time series analysis considers simultaneously more than one time-dependent variable. Each variable depends not only on its past values but also has some dependency on other variables.
+Long Short-Term Memory (LSTM) recurrent neural networks are able to almost seamlessly model problems with multiple input variables.
+
+**Source:**
+- https://machinelearningmastery.com/multivariate-time-series-forecasting-lstms-keras/
+- https://www.analyticsvidhya.com/blog/2018/09/multivariate-time-series-guide-forecasting-modeling-python-codes/
+
+
 ## Using Python to performance Data Manipulation or to automate tasks
 
 ### [ElasticSearch](https://github.com/rvalins/Data-Science-projects/blob/master/elasticsearch/ElasticSearch_connection.ipynb)
