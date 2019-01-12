@@ -54,6 +54,18 @@ Regression analysis consists of a set of machine learning methods that allow us 
 - https://www.datascienceacademy.com.br/
 
 
+### [Machine Learning on Kaggle Socccer Dataset (clustering model)](https://github.com/rvalins/Data-Science-projects/blob/master/clustering_model/clustering_model.ipynb)
+Cluster analysis or clustering is the task of grouping a set of objects in such a way that objects in the same group (called a cluster) are more similar (in some sense) to each other than to those in other groups (clusters). k-means clustering aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean.
+
+**Algorithms:**
+- k-means clustering
+
+**Source:**
+- UCSanDiegoX: Python for Data Science
+- https://en.wikipedia.org/wiki/Cluster_analysis
+- https://en.wikipedia.org/wiki/K-means_clustering
+
+
 ### [Anomaly Detection (KDD CUP 99 network intrusion data)](https://github.com/rvalins/Data-Science-projects/blob/master/anomaly-detection/anomaly_detection_isolation_forest.ipynb)
 The detection of anomalies has signiﬁcant relevance and often provides critical actionable information in various application domains.
 Isolation Forest is an outlier detection technique that identifies anomalies instead of normal observations. Similarly to Random Forest it is built on an ensemble of binary (isolation) trees. 
