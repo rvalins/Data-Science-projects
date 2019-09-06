@@ -111,6 +111,8 @@ You can use the JSON to CSV file to convert to a structered table format.
 ### [Convert JSON to CSV file](https://github.com/rvalins/Data-Science-projects/blob/master/json_to_csv/json_to_csv-file.ipynb)
 This project reads a JSON file, parse it and convert it to a CSV file.
 
+### [Merge TXT files and Convert to CSV](https://github.com/rvalins/Data-Science-projects/blob/master/merge_txt_and_convert_to_csv/merge_txt_and_convert_to_csv.ipynb)
+This project automatically merge txt files based on column position and convert to CSV file.
 
 ### [Using Python to send Emails from Gmail](https://github.com/rvalins/Data-Science-projects/blob/master/send_email/send_email.ipynb)
 This project aggregate several features, such as:
