@@ -14,9 +14,9 @@ In deep learning, a convolutional neural network (CNN, or ConvNet) is a class of
 
 This project includes a code that allows users to create a dataset from a collection of images and to prepare Train and Test files to the model.
 
-1. [Train Test Spilt (Scikit-Learn)](https://github.com/rvalins/Data-Science-projects/blob/master/emotion-identity-detection/prepare_train_test%20dataframes.ipynb)
-2. [Training the model](https://github.com/rvalins/Data-Science-projects/blob/master/emotion-identity-detection/emotion-identity-detection.ipynb)
-3. [Evaluation of the model](https://github.com/rvalins/Data-Science-projects/blob/master/emotion-identity-detection/validating_model.ipynb)
+1. Train Test Spilt (Scikit-Learn)
+2. Training the model
+3. Evaluation of the model
 
 **Source:**
 - https://en.wikipedia.org/wiki/Convolutional_neural_network
@@ -24,7 +24,7 @@ This project includes a code that allows users to create a dataset from a collec
 - https://www.datascienceacademy.com.br/
 
 
-### [Machine Learning on the Iris dataset (classification model)](https://github.com/rvalins/Data-Science-projects/blob/master/classification-models/classification_model.ipynb)
+### [Machine Learning on the Iris dataset (classification model)](https://github.com/rvalins/Data-Science-projects/blob/master/classification-models)
 Supervised learning is the machine learning task of learning a function that maps an input to an output based on example input-output pairs.
 
 **Algorithms:**
@@ -35,7 +35,7 @@ Supervised learning is the machine learning task of learning a function that map
 - https://www.dataschool.io/
 
 
-### [Machine Learning on Weather Data (classification model)](https://github.com/rvalins/Data-Science-projects/blob/master/decision-tree/decision_tree.ipynb)
+### [Machine Learning on Weather Data (classification model)](https://github.com/rvalins/Data-Science-projects/blob/master/decision-tree)
 Supervised learning is the machine learning task of learning a function that maps an input to an output based on example input-output pairs.
 
 **Algorithms:**
@@ -45,7 +45,7 @@ Supervised learning is the machine learning task of learning a function that map
 - UCSanDiegoX: Python for Data Science
 
 
-### [Regression Analysis using Machine Learning](https://github.com/rvalins/Data-Science-projects/blob/master/regression-model/linear_regression.ipynb)
+### [Regression Analysis using Machine Learning](https://github.com/rvalins/Data-Science-projects/blob/master/regression-model)
 Regression analysis consists of a set of machine learning methods that allow us to predict a continuous outcome variable (y) based on the value of one or multiple predictor variables (x).
 
 **Source:**
@@ -54,7 +54,7 @@ Regression analysis consists of a set of machine learning methods that allow us 
 - https://www.datascienceacademy.com.br/
 
 
-### [Machine Learning on Kaggle Socccer Dataset (clustering model)](https://github.com/rvalins/Data-Science-projects/blob/master/clustering_model/clustering_model.ipynb)
+### [Machine Learning on Kaggle Socccer Dataset (clustering model)](https://github.com/rvalins/Data-Science-projects/blob/master/clustering_model)
 Cluster analysis or clustering is the task of grouping a set of objects in such a way that objects in the same group (called a cluster) are more similar (in some sense) to each other than to those in other groups (clusters). k-means clustering aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean.
 
 **Algorithms:**
@@ -66,7 +66,7 @@ Cluster analysis or clustering is the task of grouping a set of objects in such 
 - https://en.wikipedia.org/wiki/K-means_clustering
 
 
-### [Anomaly Detection (KDD CUP 99 network intrusion data)](https://github.com/rvalins/Data-Science-projects/blob/master/anomaly-detection/anomaly_detection_isolation_forest.ipynb)
+### [Anomaly Detection (KDD CUP 99 network intrusion data)](https://github.com/rvalins/Data-Science-projects/blob/master/anomaly-detection)
 The detection of anomalies has signiﬁcant relevance and often provides critical actionable information in various application domains.
 Isolation Forest is an outlier detection technique that identifies anomalies instead of normal observations. Similarly to Random Forest it is built on an ensemble of binary (isolation) trees. 
 
@@ -78,7 +78,7 @@ Isolation Forest is an outlier detection technique that identifies anomalies ins
 - https://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/icdm08b.pdf
 
 
-### [Time Series Analysis - ARIMA Forecasting](https://github.com/rvalins/Data-Science-projects/blob/master/time_series_analysis/ARIMA_forecasting.ipynb)
+### [Time Series Analysis - ARIMA Forecasting](https://github.com/rvalins/Data-Science-projects/blob/master/time_series_analysis)
 Time Series is a collection of data points at constant time intervals. These are analyzed to determine the long term trend so as to forecast the future or perform some other form of analysis.
 ARIMA models are applied in some cases where data show evidence of non-stationarity, where an initial differencing step (corresponding to the "integrated" part of the model) can be applied one or more times to eliminate the non-stationarity.
 
@@ -88,7 +88,7 @@ ARIMA models are applied in some cases where data show evidence of non-stationar
 - https://www.edureka.co/
 
 
-### [Multivariate Time Series Forecasting - Long Short-Term Memory (LSTM)](https://github.com/rvalins/Data-Science-projects/blob/master/multivariate_time_series_lstm/multivariate_time_series_lstm.ipynb)
+### [Multivariate Time Series Forecasting - Long Short-Term Memory (LSTM)](https://github.com/rvalins/Data-Science-projects/blob/master/multivariate_time_series_lstm)
 Multivariate time series analysis considers simultaneously more than one time-dependent variable. Each variable depends not only on its past values but also has some dependency on other variables.
 Long Short-Term Memory (LSTM) recurrent neural networks are able to almost seamlessly model problems with multiple input variables.
 
@@ -99,7 +99,7 @@ Long Short-Term Memory (LSTM) recurrent neural networks are able to almost seaml
 
 ## Using Python to performance Data Manipulation or to automate tasks
 
-### [ElasticSearch](https://github.com/rvalins/Data-Science-projects/blob/master/elasticsearch/ElasticSearch_connection.ipynb)
+### [ElasticSearch](https://github.com/rvalins/Data-Science-projects/blob/master/elasticsearch)
 This project allows users to connect to a ElasticSearch server, to extract and to write this data in a JSON file.
 
 Elasticsearch is a full-text, distributed NoSQL database.
@@ -108,13 +108,13 @@ This code also record the previous indexes that were scanned to only get new inp
 
 You can use the JSON to CSV file to convert to a structered table format.
 
-### [Convert JSON to CSV file](https://github.com/rvalins/Data-Science-projects/blob/master/json_to_csv/json_to_csv-file.ipynb)
+### [Convert JSON to CSV file](https://github.com/rvalins/Data-Science-projects/blob/master/json_to_csv)
 This project reads a JSON file, parse it and convert it to a CSV file.
 
-### [Merge TXT files and Convert to CSV](https://github.com/rvalins/Data-Science-projects/blob/master/merge_txt_and_convert_to_csv/merge_txt_and_convert_to_csv.ipynb)
+### [Merge TXT files and Convert to CSV](https://github.com/rvalins/Data-Science-projects/blob/master/merge_txt_and_convert_to_csv)
 This project automatically merge txt files based on column position and convert to CSV file.
 
-### [Using Python to send Emails from Gmail](https://github.com/rvalins/Data-Science-projects/blob/master/send_email/send_email.ipynb)
+### [Using Python to send Emails from Gmail](https://github.com/rvalins/Data-Science-projects/blob/master/send_email)
 This project aggregate several features, such as:
 1. To custom email sender address
 As your email address is more likely to be to be recognized by your applicants and reviewers, your email is more likely to be received and not get caught in spam filters.
@@ -138,7 +138,7 @@ This project allows you to send more than one attachment, no matter the filetype
 This project create a log register for further reference
 
 
-### [Data Analytics with Python by Web scraping](https://github.com/rvalins/Data-Science-projects/blob/master/webscraping/WebScraping.ipynb)
+### [Data Analytics with Python by Web scraping](https://github.com/rvalins/Data-Science-projects/blob/master/webscraping)
 This project allows you to extract information from one website, using Python (BeautifulSoup).
 
 BeautifulSoup is a Python library which helps you to navigate, search and modify the parse tree.
