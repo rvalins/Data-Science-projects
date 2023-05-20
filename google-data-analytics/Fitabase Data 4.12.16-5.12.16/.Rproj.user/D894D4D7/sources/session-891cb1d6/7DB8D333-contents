@@ -1,0 +1,358 @@
+---
+title: 'Case Study 2: Google Data Analytics'
+author: "Ricardo Valins"
+date: "2023-05-20"
+output: html_document
+---
+
+### Roteiro do estudo de caso - Preparar
+
+#### ●	Onde seus dados são armazenados?
+
+O dataset foi baixado da comunidade Kaggle no seguinte endereço:
+https://www.kaggle.com/datasets/arashnic/fitbit
+<br>
+<br>
+O ficheiro foi gravado e extraido localmente.
+<br>
+<br>
+O ficheiro comprimido continha vários ficheiros em csv, a saber:
+<br>
+
+- dailyActivity_merged.csv
+
+- dailyCalories_merged.csv
+
+- dailyIntensities_merged.csv
+
+- dailySteps_merged.csv
+
+- heartrate_seconds_merged.csv
+
+- hourlyCalories_merged.csv
+
+- hourlyIntensities_merged.csv
+
+- hourlySteps_merged.csv
+
+- minuteCaloriesNarrow_merged.csv
+
+- minuteCaloriesWide_merged.csv
+
+- minuteIntensitiesNarrow_merged.csv
+
+- minuteIntensitiesWide_merged.csv
+
+- minuteMETsNarrow_merged.csv
+
+- minuteSleep_merged.csv
+
+- minuteStepsNarrow_merged.csv
+
+- minuteStepsWide_merged.csv
+
+- sleepDay_merged.csv
+
+- weightLogInfo_merged.csv
+<br>
+<br>
+
+#### ●	Como os dados são organizados? No formato longo ou largo?
+Como os próprios nomes dos ficheiros sugere, há uma granularidade temporal nos mesmos com base no tempo de apresentação das informações, por exemplo, em dias, horas e minutos.
+<br>
+<br>
+Para o propósito de nossa análise, é suficiente a abertura destes dados por dia, razão pela qual não iremos explorar as outras granularidades salvo se julgarmos relevantes um maior detalhamento.
+<br>
+<br>
+Dentre os ficheiros com indicação de dados diários, exploramos a possibilidade de se criar um modelo de dados. Contudo, percebemos que para este problema de negócio tal situação não seria necessária, bastando apenas utilizar o ficheiro `dailyActivity_merged`.
+<br>
+<br>
+Conforme sugerido pela formação, iremos utilizar o MS Excel para fazer uma análise preliminar dos dados antes de trabalharmos os mesmos no `R Studio`.
+<br>
+<br>
+Preparamos o ficheiro em Excel para importar os dados com o locale `"English (United States)"` em Regional Settings.
+<br>
+<br>
+Utilizamos o código a seguir para importar os dados:
+<br>
+<br>
+
+#### dailyActivity_merged
+```
+let
+    Source = Csv.Document(File.Contents("C:\_google data analytics\08 Projeto final de Data Analytics do Google\Fitabase Data 4.12.16-5.12.16\dailyActivity_merged.csv"),[Delimiter=",", Columns=15, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Id", Int64.Type}, {"ActivityDate", type date}, {"TotalSteps", Int64.Type}, {"TotalDistance", type number}, {"TrackerDistance", type number}, {"LoggedActivitiesDistance", type number}, {"VeryActiveDistance", type number}, {"ModeratelyActiveDistance", type number}, {"LightActiveDistance", type number}, {"SedentaryActiveDistance", type number}, {"VeryActiveMinutes", Int64.Type}, {"FairlyActiveMinutes", Int64.Type}, {"LightlyActiveMinutes", Int64.Type}, {"SedentaryMinutes", Int64.Type}, {"Calories", Int64.Type}}),
+    #"Filtered Rows" = Table.SelectRows(#"Changed Type", each true)
+in
+    #"Filtered Rows"
+```
+<br>
+<br>
+Com isto, teremos os seguintes dados carregados:
+<br>
+<br>
+![Informação Carregada no Excel](../prints/snapshot1_Dataload.png)
+<br>
+<br>
+Como podemos observar, os dados estão em `formato largo (wide-format)`
+<br>
+<br>
+
+#### ●	Existem problemas com viés ou credibilidade nesses dados? Seus dados são confiáveis, originais, abrangentes, atuais e incluem a fonte?
+
+Cada linha do ficheiro representa uma captura de informação do dia de um utilizador (campo `id`).
+
+Verificamos através de uma tabela dinâmica que temos 33 utilizadores distintos.
+
+Nota: a descrição dos dados do Kaggle indicam existir 30 utilizadores e como vimos temos dados de 33.
+
+Ao fazer uma tabela dinâmica, percebemos também, que os dados foram obtidos no período de `12/04/2016` até `12/05/2016`. Não há dias em que não houve captura.
+
+Notamos que nem todos os utilizadores utilizaram o aplicativo todos os dias (isso implicaria termos 31 dias x 33 ids = 1023 rows, quando temos 940 rows total).
+
+O utilizador que menos dias teve de captura de informação foi o id `4057192912` que utilizou o app apenas 4 dias, 
+
+- 12/04/2016
+
+- 13/04/2016
+
+- 14/04/2016
+
+- 15/04/2016
+
+Não há evidências de que este id teve seus dados capturados em outro id, já que todos os outros também tem dados no período acima, o que nos faz acreditar que este utilizador somente utilizou neste período acima.
+
+Os demais ids tiveram um nível de utilização razoável para o período, sendo o segundo id com menos utilização o id `2347167796
+` com 18 dias. Temos 30 ids com 20 ou mais dias de captura de informação. 
+
+A princípio, não temos evidência da existência de algum tipo de viés, até mesmo porque os dados são descaracterizados.
+
+Podemos também assumir que os mesmos são confiáveis e originais, pois o Kaggle geralmente é criterioso em ter este tipo de coleções em sua comunidade.
+
+Como indicado anteriormente, os dados são de 2016, e portanto não são tão recentes. Contudo, dado o carater das informações (dados de atividade e consumo calórico), não é um critério que possa a vir a prejudicar a análise.
+
+Os dados incluem a fonte, contudo, como vimos anteriormente, a abrangência é um pouco limitada (pouco mais de 30 utilizadores por um período de 31 dias). Se pensarmos na população potencial e/ou utilizadora de apps de monitoração é um período muito curto e com poucas pessoas participantes.
+<br>
+<br>
+
+#### ●	Como você está lidando com o licenciamento, a privacidade, a segurança e a acessibilidade?
+
+Os dados são públicos e anonimizados, por isto, não é necessário maiores cuidados neste sentido. Por também estarem a ser utilizados em um diretório local e com o propóstio desta análise, tomaremos os dados de segurança e acessibilidade para garantir a integridade destes dados.
+<br>
+<br>
+
+#### ●	Como você verificou a integridade dos dados? Como isso o ajuda a responder à sua pergunta?
+
+A integridade foi verificada com o uso do Excel para perceber potenciais indicios de problemas nos dados.
+
+O Excel é uma ferramenta prática que com simples funções, como a inclusão de tabelas dinâmicas, classificações e filtros de dados permitem perceber falhas na integridade dos dados.
+<br>
+<br>
+
+#### ● Há algum problema com os dados?
+
+Analisamos por exemplo, se confirmaria-se a hipótese de que nos dados existentes, para maiores distâncias percorridas, maiores teriam sido os passos necessários.
+
+Com isto fizemos o seguinte gráfico no Excel:
+
+![Informação Carregada no Excel](../prints/snapshot2_TotalDistanceTotalSteps.png)
+<br>
+<br>
+Quer dizer: há uma relação positiva e direta entre os dois indicadores, evidenciando uma clara pertinência nos dados existentes.
+
+No dataset, temos os seguintes campos:
+
+- TotalDistance (sum: 5160,319995)
+
+- TrackerDistance (Sum: 5146,829994)
+
+- LoggedActivitiesDistance (sum: 101,6806835)
+
+- VeryActiveDistance (sum: 1412,52)
+
+- ModeratelyActiveDistance (Sum: 533,4899983)
+
+- LightActiveDistance (sum: 3140,37)
+
+- SedentaryActiveDistance (Sum: 1,509999979)
+
+
+Imaginavamos que a soma das distancias segregadas iria ser o mesmo das distancias totais, mas isto não se verificou.
+
+
+Um outro teste efetuado foi verificar se para cada utilizador / dia, a soma dos tempos segregados era um valor que não ultrapassasse o número de horas que um dia possui, isto é, 1440 minutos.
+
+Obviamente não esperavamos que todos os valores fossem igual a 1440, pois o utilizador poderia nao ter usado o app neste periodo por diversas razões. Aqui, inicialmente, era encontrar valores positivos e menores que 1440.
+
+
+![Daily Minutes](../prints/snapshot3_DailyMinutes.png)
+
+Como podemos observar, há uma integridade nestes dados já que estão no intervalo de [0, 1440]. Através deste visual percebemos que 51.06% da combinação de dias x utilizadores foram acima de 1427 minutos (primeiro nível neste gráfico de Pareto).
+<br>
+<br>
+
+### Roteiro do estudo de caso - Processar
+
+#### ● Quais ferramentas você está escolhendo e por quê?
+
+Para a etapa de processamento dos dados estamos a utilizar o Excel por ser uma ferramenta simples e prática e que facilmente auxilia nesta tarefa.
+<br>
+<br>
+
+#### ● Você garantiu a integridade dos seus dados?
+
+Até o momento, identificamos potenciais situações que põe em risco a integridade do nosso dataset. Iremos realizar a limpeza de dados de forma a garantir a completa integridade dos dados durante esta etapa.
+<br>
+<br>
+
+#### ● Que medidas foram tomadas para garantir que seus dados estejam limpos?
+
+Até o momento, identificamos potenciais situações que põe em risco a integridade do nosso dataset. Iremos realizar a limpeza de dados de forma a garantir a completa integridade dos dados durante esta etapa.
+
+Diante do exposto anteriormente, iremos realizar as seguintes etapas:
+
+- Exclusão do Id `4057192912` que utilizou o app apenas 4 dias,
+
+- Exclusão das colunas `TotalDistance`, `TrackerDistance` e `LoggedActivitiesDistance` (usaremos um somatório das colunas segmentadas como Distancia Total)
+
+- Inclusão de uma coluna com o total dos Minutos de Utilização (`TotalMinutes` = `VeryActiveMinutes` + `FairlyActiveMinutes` +  `LightlyActiveMinutes` + `SedentaryMinutes`)
+<br>
+<br>
+
+#### ● Como você pode verificar se seus dados estão limpos e prontos para análise?
+
+Com a efetivação dos processos de transformação, podemos realizar testes que evidenciam os detalhes que originaram os processos implementados.
+
+Por exemplo: como realizamos a exclusão do utilizador que teve uma pequena participação no processo, basta validar que o mesmo não se encontra mais no dataset final.
+<br>
+<br>
+
+#### ● Você documentou seu processo de limpeza para poder revisar e compartilhar esses resultados?
+
+Todo o processo de análise da limpeza está a ser documentado em um documento Markdown no `RStudio`.
+
+Como não houve missing data ou necessidades de tratamento de dados, não há etapas a serem incluídas neste processo.
+
+Decidimos fazer alguns processamentos que ficaram gravados no `Power Query` que apresentamos a seguir:
+<br>
+<br>
+
+#### dailyActivity_merged
+```
+let
+    Source = Csv.Document(File.Contents("C:\_google data analytics\08 Projeto final de Data Analytics do Google\Fitabase Data 4.12.16-5.12.16\dailyActivity_merged.csv"),[Delimiter=",", Columns=15, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Id", Int64.Type}, {"ActivityDate", type date}, {"TotalSteps", Int64.Type}, {"TotalDistance", type number}, {"TrackerDistance", type number}, {"LoggedActivitiesDistance", type number}, {"VeryActiveDistance", type number}, {"ModeratelyActiveDistance", type number}, {"LightActiveDistance", type number}, {"SedentaryActiveDistance", type number}, {"VeryActiveMinutes", Int64.Type}, {"FairlyActiveMinutes", Int64.Type}, {"LightlyActiveMinutes", Int64.Type}, {"SedentaryMinutes", Int64.Type}, {"Calories", Int64.Type}}),
+    #"Filtered Rows" = Table.SelectRows(#"Changed Type", each [Id] <> 4057192912),
+    #"Removed Columns" = Table.RemoveColumns(#"Filtered Rows",{"TotalDistance", "TrackerDistance", "LoggedActivitiesDistance"}),
+    #"Inserted Sum" = Table.AddColumn(#"Removed Columns", "TotalDistance", each List.Sum({[VeryActiveDistance], [ModeratelyActiveDistance], [LightActiveDistance], [SedentaryActiveDistance]}), type number),
+    #"Inserted Sum1" = Table.AddColumn(#"Inserted Sum", "TotalMinutes", each List.Sum({[VeryActiveMinutes], [FairlyActiveMinutes], [LightlyActiveMinutes], [SedentaryMinutes]}), Int64.Type)
+in
+    #"Inserted Sum1"
+```
+<br>
+<br>
+Por fim, exportamos o dataset transformado com o nome de `dataset.csv`
+<br>
+<br>
+
+### Roteiro do estudo de caso - Analisar
+
+#### ● Como você deve organizar seus dados para realizar análises sobre eles?
+
+Para esta etapa de análise, iremos usar o `R Studio`. Para isto iremos realizar a importação da biblioteca `tidyverse`
+<br>
+<br>
+
+```{r chunk-label1, include=TRUE}
+library(tidyverse)
+```
+Faremos a importação para o `dataset`
+<br>
+<br>
+```{r chunk-label2, include=TRUE}
+
+dataset <- read.csv("../dataset/dataset.csv", sep = ";", dec = ",")
+
+```
+Aplicaremos o comando para visualização `View`
+<br>
+<br>
+```{r chunk-label3, include=TRUE}
+
+View(dataset)
+
+```
+Apresentaremos os primeiros rows com o comando `head`
+<br>
+<br>
+```{r chunk-label4, include=TRUE}
+
+head(dataset)
+
+```
+
+
+#### ● Seus dados foram formatados corretamente?
+Vamos verificar os formatos do campo com o comando `str`
+<br>
+<br>
+
+```{r chunk-label5, include=TRUE}
+
+str(dataset)
+
+```
+
+É preciso converter para data o campo `ActivityDate`
+
+Vamos aproveitar também e converter o campo `Id` para texto
+<br>
+<br>
+```{r chunk-label6, include=TRUE}
+
+dataset$ActivityDate <- as.Date(dataset$ActivityDate, format = "%d/%m/%Y")
+dataset$Id <- as.character(dataset$Id)
+
+```
+Para confirmar, vamos aplicar novamente o comando `str`
+<br>
+<br>
+
+```{r chunk-label7, include=TRUE}
+
+str(dataset)
+
+```
+Vamos aplicar o comando `summary` para ter uma breve informação do dataset
+<br>
+<br>
+```{r chunk-label8, include=TRUE}
+
+summary(dataset)
+
+```
+<br>
+<br>
+
+#### ● Que tendências ou relações você encontrou nos dados?
+Vamos verificar a relação entre os campos `TotalDistance` e `Calories`
+<br>
+<br>
+
+```{r chunk-label9, include=TRUE}
+
+ggplot(data=dataset, aes(x=TotalDistance, y=Calories)) + 
+  geom_point() + 
+  geom_smooth() + 
+  labs(title="Total Distance vs. Calories")
+
+
+```
+
+`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+<br>
+<br>
+As próximas etapas serão efetuadas no Tableau.
+
