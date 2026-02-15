@@ -1,69 +1,84 @@
-# Python Fundamentos
+# 🐍 Python Fundamentos
 
-Este repositório foi criado para apoiar a formação **UFCD 10805 -
-Programação em Python**, especificamente no tópico sobre o GitHub.
+Bem-vindo ao repositório **python-fundamentos** 🚀
+
+Este projeto foi criado para apoiar a formação **UFCD 10805 -
+Programação em Python**, especificamente no tópico sobre o **GitHub**.
 
 ------------------------------------------------------------------------
 
-## Objetivo
+## 📚 Objetivo
 
-O objetivo deste repositório é explorar o GitHub e permitir que os
-formandos compreendam, na prática, como funciona o versionamento de
+O objetivo deste repositório é explorar o tópico **GitHub**, permitindo
+que os formandos compreendam na prática como funciona o versionamento de
 código e a colaboração em projetos.
 
-Serão abordados os seguintes conceitos:
+Ao longo deste material, serão abordados conceitos como:
 
--   O que é o Git\
--   O que é o GitHub\
--   Criação de conta\
--   Criação de repositórios\
--   Clonar um repositório\
--   Realizar commits\
--   Enviar alterações (push)\
--   Atualizar projetos (pull)
+-   ✅ O que é o Git e o GitHub\
+-   ✅ Criação de conta no GitHub\
+-   ✅ Criação de repositórios\
+-   ✅ Clonar um repositório\
+-   ✅ Fazer commits\
+-   ✅ Enviar alterações (push)\
+-   ✅ Atualizar projetos (pull)\
+-   ✅ Organização básica de projetos
 
-A proposta é aprender utilizando um repositório real desde o início.
+A proposta é que o formando aprenda GitHub utilizando um repositório
+real desde o início.
 
 ------------------------------------------------------------------------
 
-## Público-Alvo
+## 🎯 Público-Alvo
 
-Este material destina-se a:
+Este material foi desenvolvido para:
 
 -   Formandos da UFCD 10805\
 -   Iniciantes em programação\
 -   Pessoas sem experiência prévia em Git ou GitHub
 
-Não é necessário conhecimento avançado.
+Não é necessário conhecimento avançado --- apenas noções básicas de
+informática.
 
 ------------------------------------------------------------------------
 
-## Metodologia
+## 🛠 Metodologia
 
-A abordagem é prática e progressiva:
+A abordagem será totalmente prática:
 
-1.  Criar\
-2.  Alterar\
-3.  Versionar\
-4.  Publicar
-
-O objetivo é desenvolver confiança no uso de sistemas de controlo de
-versões.
+-   📌 Aprender criando\
+-   💻 Trabalhar diretamente no GitHub\
+-   🔁 Repetir o ciclo: alterar → guardar → versionar → publicar\
+-   🚀 Ganhar confiança no uso de controlo de versões
 
 ------------------------------------------------------------------------
 
-## Requisitos
+## 🧠 Por que aprender GitHub?
 
--   Conta no GitHub\
--   Python instalado
+Hoje, praticamente todos os projetos de software utilizam sistemas de
+controlo de versões.\
+Aprender GitHub significa:
+
+-   Trabalhar de forma profissional\
+-   Organizar melhor o código\
+-   Colaborar com outras pessoas\
+-   Construir um portefólio online
 
 ------------------------------------------------------------------------
 
-## Autor
+## 📌 Requisitos
+
+-   Conta criada no GitHub\
+-   Python instalado\
+-   Vontade de experimentar e aprender 🙂
+
+------------------------------------------------------------------------
+
+## 👨‍🏫 Autor
 
 Desenvolvido no âmbito da formação **UFCD 10805 - Programação em
 Python**.
 
 ------------------------------------------------------------------------
 
-\> Saber programar é importante. Saber versionar é profissional.
+> 💡 "Saber programar é importante. Saber versionar é profissional."
